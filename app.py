@@ -13,7 +13,7 @@ st.markdown(
         border-radius: 5px;
     }
     .st-emotion-cache-15hul6a{
-        background-color: #808080;
+        background-color: #fff9fa;
         color:	#e60000;
     }
 
@@ -27,8 +27,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-#st.title("Welcome to VioraAI")
-st.markdown("<h1 class='stTitle'>Welcome to VioraAI</h1>", unsafe_allow_html=True)
+
+
+col1, col2 = st.columns([1, 3])  # Adjust the ratio to fit your layout
+
+with col1:
+    st.image("./logo.png", width=130)  # Adjust width as needed
+
+with col2:
+    st.markdown("<h1 class='stTitle'>Welcome to VioraAI</h1>", unsafe_allow_html=True)
+
+
 
 genai.configure(api_key="AIzaSyA31rNdKIYvcr187RLiU9g8wjXuDbVAnFY")
 
